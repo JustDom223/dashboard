@@ -1,0 +1,48 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    's h'
+    's b'
+    ;
+
+}
+
+
+/* Header */
+
+.header{
+    grid-area: h;
+    background-color: blueviolet;
+
+}
+
+/* Side bar */
+
+.sidebar{
+    background-color: rgb(63, 159, 190);
+    grid-area: s;
+    justify-content: center;
+    padding: 9px;
+}
+.sidebarHeading{
+    display: grid;
+    
+}
+.sidebar ul li{
+    list-style-type: none;
+    font-size: 2vw;
+}
+.dashIcon{
+    height: 4vw;
+}
+.icons{
+    height: 2vw;
+}
+
+/* Project board */
+.projectBoard{
+    background-color: goldenrod;
+    grid-area: b;
+}
