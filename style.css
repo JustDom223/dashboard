@@ -1,8 +1,10 @@
+/* Reset default margin and padding for all elements */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Overall layout using CSS Grid */
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -13,14 +15,15 @@ body {
     ;
 }
 
-/* Header */
-
+/* Header styling */
 .header {
     grid-area: header;
     background-color: blueviolet;
     padding: 10px;
-    box-shadow: 10px 10px 15px;
+    z-index: 1;
+    box-shadow: 0px 5px 15px;
 
+    /* Subgrid for header content */
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -30,6 +33,7 @@ body {
     ;
 }
 
+/* Styling for search bar within the header */
 .searchBar {
     grid-area: search-bar;
 }
@@ -38,26 +42,29 @@ body {
     width: 80%;
 }
 
+/* Styling for user info within the header */
 .userInfo {
     grid-area: user-info;
 }
 
+/* Styling for greeting within the header */
 .greeting {
     grid-area: greeting;
 }
 
+/* Styling for functions within the header */
 .functions {
     grid-area: functions;
 }
 
-/* Sidebar */
-
+/* Sidebar styling */
 .sidebar {
     background-color: rgb(63, 159, 190);
     grid-area: sidebar;
     padding: 40px;
 }
 
+/* Styling for sidebar heading */
 .sidebarHeading {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -65,14 +72,17 @@ body {
     margin-bottom: 20px;
 }
 
+/* Styling for heading text within the sidebar */
 .sidebarHeading h2 {
     font-size: 3vw;
 }
 
+/* Styling for unordered list within the sidebar */
 .sidebar ul {
     padding: 10px;
 }
 
+/* Styling for list items within the sidebar */
 .sidebar ul li {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -80,28 +90,32 @@ body {
     font-size: 2vw;
 }
 
+/* Styling for anchor tags */
 a {
     text-decoration: none;
 }
 
+/* Styling for images within list items */
 li img {
     justify-self: center;
 }
 
+/* Specific styling for a dashboard icon */
 .dashIcon {
     height: 2.5vw;
 }
 
+/* General styling for icons */
 .icons {
     height: 2vw;
 }
 
-/* Project board */
-
+/* Project board styling */
 .projectBoard {
     background-color: goldenrod;
     grid-area: project-board;
 
+    /* Subgrid for project board content */
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -111,25 +125,30 @@ li img {
     ;
 }
 
+/* Styling for heading within the project board */
 h3 {
     margin: 10px;
     position: absolute;
 }
 
+/* Styling for projects section */
 .projects {
     grid-area: projects;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+/* Styling for announcements section */
 .announcements {
     grid-area: announcements;
 }
 
+/* Styling for trending section */
 .trending {
     grid-area: trending;
 }
 
+/* Styling for individual project cards */
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -148,15 +167,18 @@ h3 {
     border-radius: 12px;
 }
 
+/* Styling for header within project cards */
 .card h4 {
     grid-area: header;
 }
 
+/* Styling for content within project cards */
 .card p {
     grid-area: content;
     font-size: 20px;
 }
 
+/* Styling for options section within project cards */
 .cardOptions {
     grid-area: options;
     display: flex;
