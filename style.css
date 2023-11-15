@@ -18,7 +18,7 @@ body {
 /* Header styling */
 .header {
     grid-area: header;
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     z-index: 1;
     box-shadow: 0px 5px 15px;
@@ -33,18 +33,29 @@ body {
     ;
 }
 
+
 /* Styling for search bar within the header */
 .searchBar {
     grid-area: search-bar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .searchBar input {
     width: 80%;
+    height: 20px;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
 }
 
 /* Styling for user info within the header */
 .userInfo {
     grid-area: user-info;
+    
+    display: flex;
+    gap: 20px;
 }
 
 /* Styling for greeting within the header */
@@ -55,6 +66,24 @@ body {
 /* Styling for functions within the header */
 .functions {
     grid-area: functions;
+
+}
+
+.functions ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+button{
+    height: 1.7rem;
+    width: 4.5rem;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(63, 159, 190);
+    color: white;
+    
+
 }
 
 /* Sidebar styling */
@@ -62,6 +91,7 @@ body {
     background-color: rgb(63, 159, 190);
     grid-area: sidebar;
     padding: 40px;
+    z-index: 1;
 }
 
 /* Styling for sidebar heading */
@@ -112,7 +142,7 @@ li img {
 
 /* Project board styling */
 .projectBoard {
-    background-color: goldenrod;
+    background-color: rgb(240, 240, 240);
     grid-area: project-board;
 
     /* Subgrid for project board content */
